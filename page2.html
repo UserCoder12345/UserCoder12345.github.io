@@ -21,10 +21,13 @@ function send() {
 var password = document.getElementById("fname").value;
 password = atob(password.toString())
 if (password == "Text") {
-    document.getElementById("result").innerHTML = "Correct!"
+    document.getElementById("result").outerHTML = "<button onclick='next();'>Proceed</button>"
 } else {
     document.getElementById("result").innerHTML = "Incorrect password."
 }
+}
+function next();{
+    window.location = "page_3"
 }
 </script>
 </html>
