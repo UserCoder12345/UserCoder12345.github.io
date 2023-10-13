@@ -19,7 +19,7 @@
 <script>
 function send() {
 var password = document.getElementById("fname").value;
-atob(password.toString())
+password = atob(password.toString())
 if (password == "Text") {
     document.getElementById("result").innerHTML = "Correct!"
 } else {
