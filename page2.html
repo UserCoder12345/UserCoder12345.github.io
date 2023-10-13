@@ -19,7 +19,7 @@
 <script>
 function send() {
 var password = document.getElementById("fname").value;
-// atob(password.toString()) - Base64 encoding doesn't work, what a shame.
+atob(password.toString())
 if (password == "Text") {
     document.getElementById("result").innerHTML = "Correct!"
 } else {
