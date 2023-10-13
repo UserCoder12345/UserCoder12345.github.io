@@ -4,6 +4,26 @@
     <title>Test Website</title>
 </head>
     <h1>Page 2</h1>
+    <p>Welcome!</p>
     <a href='https://usercoder12345.github.io'>Go back to main page.</a>
-    
+    <p>Type the password to enter page 3:</p>
+
+    <form>
+  <label for="fname">Password:</label><br>
+  <input type="text" id="fname" name="fname" value="John">
+  <br>
+  <input type="button" name="submit" value="Send" onclick="send()">
+</form>
+<p id="result">...</p>
+
+<script>
+function send() {
+var password = document.getElementById("fname").value;
+if (atob(password) == "Text") {
+    document.getElementById("result").innerHTML = "Correct!"
+} else {
+    document.getElementById("result").innerHTML = "Incorrect password."
+}
+}
+</script>
 </html>
